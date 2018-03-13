@@ -1,23 +1,23 @@
 // ==UserScript==
-// @name         SPPixel Minimap
-// @namespace    SPPixel Minimap
+// @name         Minimap PP
+// @namespace    Minimap PP
 // @version      0.1.0
-// @description  minimap oficial SPPixel
+// @description  PP
 // @author       Felipe GM
 // @match        https://pixelcanvas.io/*
 // @match        http://pixelcanvas.io/*
-// @homepage     https://github.com/Felipefury/minimapsp/
-// @updateURL    https://raw.githubusercontent.com/Felipefury/minimapsp/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/Felipefury/minimapsp/master/minimap.user.js
+// @homepage     https://github.com/VitoP4NDOR4/PPminimap/
+// @updateURL    https://raw.githubusercontent.com/VitoP4NDOR4/PPminimap/master/minimap.user.js
+// @downloadURL  https://raw.githubusercontent.com/VitoP4NDOR4/PPminimap/master/minimap.user.js
 // @grant        none
 // ==/UserScript==
 
 //ref:https://stackoverflow.com/questions/4604663/download-single-files-from-github
 //github raw file url  template
 //https://raw.githubusercontent.com/user/repository/branch/filename
-//https://raw.githubusercontent.com/Felipefury/minimapsp/master/README.md
+//https://raw.githubusercontent.com/VitoP4NDOR4/PPminimap/master/README.md
 
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Felipefury/minimapsp/master';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/VitoP4NDOR4/PPminimap/master';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -174,7 +174,7 @@ function exportMd() {
     Object.keys(template_list).map(function (index, ele) {
         var eles = template_list[index];
         mdstr += '\n#### ' + index;
-        mdstr += '\n[![](https://raw.githubusercontent.com/Felipefury/minimapsp/master/images/' + eles.name + ')]';
+        mdstr += '\n[![](https://raw.githubusercontent.com/VitoP4NDOR4/PPminimap/master/images/' + eles.name + ')]';
         mdstr += '(http://pixelcanvas.io/@' + Math.floor(eles.x + eles.width / 2) + ',' + Math.floor(eles.y + eles.height / 2) + ')'
         mdstr += '\n';
         ttlpx += eles.width * eles.height;
